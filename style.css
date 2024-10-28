@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Fruktur&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fruktur', cursive;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #0b061f;
+}
+
+button {
+  height: 50px;
+  background-color: #0b061f;
+  color: snow;
+  font-size: 1em;
+  border: 2px solid snow;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  
+}
+
+button:hover {
+  animation: button 4s linear infinite;
+}
+
+button::before {
+  content: "FELIZ HALLOWEEN";
+  position: absolute;
+  font-size: 4.5em;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+  animation: text 5s linear infinite;
+}
+
+button:hover::before {
+  transform: scale(1) translateY(-150px);
+  opacity: 1;
+}
+
+@keyframes text {
+  0% {
+    color: #ff7518;
+    /* Naranja oscuro */
+    text-shadow: 0 0 10px #ff7518;
+  }
+
+  25% {
+    color: #ff00ff;
+    /* Magenta */
+    text-shadow: 0 0 15px #ff00ff;
+  }
+
+  50% {
+    color: #00ff00;
+    /* Verde neón */
+    text-shadow: 0 0 15px #00ff00;
+  }
+
+  75% {
+    color: #ff0000;
+    /* Rojo neón */
+    text-shadow: 0 0 15px #ff0000;
+  }
+
+  100% {
+    color: #ff7518;
+    /* Vuelve a naranja oscuro */
+    text-shadow: 0 0 15px #ff7518;
+  }
+}
+
+@keyframes button {
+  0% {
+    background-color: #ff7518;
+    /* Naranja oscuro */
+    box-shadow: 0 0 10px #ff7518;
+  }
+
+  25% {
+    background-color: #ff00ff;
+    /* Magenta */
+    box-shadow: 0 0 15px #ff00ff;
+  }
+
+  50% {
+    background-color: #00ff00;
+    /* Verde neón */
+    box-shadow: 0 0 15px #00ff00;
+  }
+
+  75% {
+    background-color: #ff0000;
+    /* Rojo neón */
+    box-shadow: 0 0 15px #ff0000;
+  }
+
+  100% {
+    background-color: #ff7518;
+    /* Vuelve a naranja oscuro */
+    box-shadow: 0 0 15px #ff7518;
+  }
+}
